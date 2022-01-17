@@ -21,7 +21,7 @@ export default function Navbar(){
     return(
         <>
             <div className="d-flex justify-content-between container my-4 bg-secondary rounded">
-                <Link className="text-decoration-none mx-3 p-1 bg-secondary text-white" to="/bookOcean">Home</Link> 
+                <Link className="text-decoration-none mx-3 p-1 bg-secondary text-white" to="/bookOcean">BookOcean</Link> 
                 <input type="search" className="input-group rounded form-control rounded" value ={name} onChange={onChangeHandler}placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                 <button style={{"width":"60px"}} className=" text-white btn btn-secondary" onClick={searchProduct} ><FaSearch/></button>
                 <Link className="text-decoration-none mx-3 p-1 bg-secondary text-white" to="/login">Login</Link> 

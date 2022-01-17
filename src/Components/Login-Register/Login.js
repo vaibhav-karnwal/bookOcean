@@ -14,7 +14,7 @@ export default function Login(){
     })
 
     useEffect(()=>{
-        document.title="Register"
+        document.title="Login"
         if(isLogged===true){
             <Link to="/login"></Link> 
         }
@@ -42,10 +42,11 @@ export default function Login(){
     return(
         <section className='text-center'>
             <h1 className=''>Login</h1>
-            <form style={{"margin":"0 auto"}}  className='w-25 gap-2 card p-2 d-flex flex-column align-items-center my-2'>
-               <input type="text" id="login" value = {employee.email} onChange={emailHandler} className="fadeIn second" name="login" placeholder="example@gmail.com"/>
-                <input type="text" id="password" value = {employee.password} onChange={passwordHandler} className="fadeIn third" name="login" placeholder="password"/>
-                <input type="submit" className="fadeIn fourth" onClick={checkUser} value="Login"/>
+            <form style={{"margin":"0 auto"}}  className='w-25 py-4 px-4 border-secondary gap-2 card p-2 d-flex flex-column align-items-center my-2'>
+                <input type="text" id="login" value = {employee.email} onChange={emailHandler} className="fadeIn first w-100 border-radius-2" name="login" placeholder="example@gmail.com"/>
+                <input type="text" id="password" value = {employee.password} onChange={passwordHandler} className="fadeIn third w-100" name="login" placeholder="password"/>
+                <input type="submit" className="fadeIn fourth w-25" onClick={checkUser} value="Login"/>
+                <Link to="" className='text-danger text-decoration-none'>Forget password</Link>
             </form>
         </section>
     )

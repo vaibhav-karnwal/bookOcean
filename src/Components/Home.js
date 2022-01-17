@@ -10,7 +10,7 @@ export default function Home(){
     const [products,setProducts] = useState(data)
 
     useEffect(()=>{
-        document.title="Bookland"
+        document.title="BookOcean"
     })
         // array of N elements, where N is the number of rows needed
     const rows = [...Array( Math.ceil(products.length / 5) )];
