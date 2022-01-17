@@ -15,8 +15,8 @@ export default function App(){
         <>
             <Navbar/>
             <section>
-                <Route exact path="/" component={Main}/>
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/bookOcean" component={Main}/>
+                <Route exact path="/bookOcean" component={Home}/>
                 <Route exact path="/loginregister" component={LoginRegister}/>
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/register" component={Register}/>
