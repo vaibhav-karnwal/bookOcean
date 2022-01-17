@@ -9,7 +9,7 @@ export default function Footer(){
                     <div className="row text-center text-md-left mt-3 pb-3">
                         <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                             <h6 className="text-uppercase mb-4 font-weight-bold">Company name</h6>
-                            <p>Bookland</p>
+                            <p>BookOcean</p>
                         </div>
                         <hr className="w-100 clearfix d-md-none"/>
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -41,7 +41,7 @@ export default function Footer(){
                             <p>
                             <i className="fas fa-home mr-3"></i> India, NY 10012, US</p>
                             <p>
-                            <i className="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <i className="fas fa-envelope mr-3"></i> vaibhavkarnwal@gmail.com</p>
                             <p>
                             <i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                             <p>
@@ -53,7 +53,7 @@ export default function Footer(){
                         <div className="col-md-7 col-lg-8">
                             <p className="text-center text-md-left">© 2022 Copyright:
                             <Link href="https://mdbootstrap.com/">
-                                <strong> Bookland.com</strong>
+                                <strong> BookOcean.com</strong>
                             </Link>
                             </p>
                         </div>
