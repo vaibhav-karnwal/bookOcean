@@ -16,10 +16,10 @@ export default function Main(){
             <div className="box" style={{"marginBottom":"10%"}} >
                 <h3 className= "position-absolute mx-4">"That's the thing about books. They let 
                 <br/> you travel without moving your feet."</h3>
-                <div style={{"marginLeft":"40%","float":"left","height":"120px", "border-right": "3px solid grey"}}>     
+                <div style={{"marginLeft":"40%","float":"left","height":"120px", "borderRight": "3px solid grey"}}>     
                     <p/>
                 </div>
-                <div className="my-4 mx-2 p-1" style={{"float":"left","height":"120px", "border-right": "3px solid grey"}}> 
+                <div className="my-4 mx-2 p-1" style={{"float":"left","height":"120px", "borderRight": "3px solid grey"}}> 
                     <p/>
                 </div>
                 <h1 className="display-4 p-4 text-left">Every Book<br/> Personally chooses.</h1>

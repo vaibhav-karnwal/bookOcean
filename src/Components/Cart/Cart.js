@@ -1,32 +1,23 @@
-import React,{useState} from "react";
+import React from "react";
+import CartBox from "../common/CartBox";
 
-export default function Cart(props){
-    const [cartProduct, setCartProduct] = useState(props)
-    
-    const removeProduct=(id)=>{
-        let newCartProduct = cartProduct.filter((product)=>product.id!==id)
-        setCartProduct(newCartProduct);
-    }
-    useEffect(()=>{
-        document.title="Cart"
-    })
-    
-    return(
-        <>
-            {cartProduct.map(product=>{
-                const {id,img,title,price} = product
-                return (
-                    <div className="d-flex flex-row">
-                        <img src={img} alt="product"/>
-                        <div className="d-flex flex-column">
-                            <h6>{title}</h6>
-                            <span>Price : Rs {price}</span>
-                            <button onClick={()=>removeProduct(id)}>Remove</button>
-                        </div>
-                    </div>
-                )
-            })}
-            <button onClick={()=>setCartProduct([])}>Clear Cart</button>
-        </>
-    )
+export default function Cart() {
+  const cartList = JSON.parse(localStorage.getItem("cartList") || "[]");
+  const removeProduct = (id) => {
+    let newCartProduct = cartList.filter((product) => product.id !== id);
+    cartList.push(newCartProduct);
+    localStorage.setItem("cartList", JSON.stringify(cartList));
+  };
+  const clearCart = () => {
+    localStorage.setItem("cartList", JSON.stringify([]));
+  };
+
+  return (
+    <div className="card border-2 p-2 m-2 d-flex flex-column">
+      {cartList.map((product) => {
+        return <CartBox key={product.id} {...product} />;
+      })}
+      <button onClick={() => clearCart()}>Clear Cart</button>
+    </div>
+  );
 }

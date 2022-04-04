@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
-import Product from "./ProductUI/Product";
-import data from "./data/product.json";
+import React, { useState } from "react";
+import Home from "../Home";
+import { getProductList } from "../Utils/ProductList";
+import Product from "./Product";
 
-export default function Home(props) {
-  useEffect(() => {
-    document.title = "BookOcean";
-  });
+export default function FilteredProduct() {
+  const products = getProductList();
   // array of N elements, where N is the number of rows needed
-  const rows = [...Array(Math.ceil(data.length / 5))];
+  const rows = [...Array(Math.ceil(products.length / 5))];
   // chunk the products into the array of rows
-  const productRows = rows.map((row, idx) => data.slice(idx * 5, idx * 5 + 5));
+  const productRows = rows.map((row, idx) =>
+    products.slice(idx * 5, idx * 5 + 5)
+  );
 
   return (
     <section className="container">
