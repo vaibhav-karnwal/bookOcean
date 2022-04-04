@@ -9,11 +9,9 @@ import Main from "./Components/Main/Main";
 import Navbar from "./Components/Navbar";
 import FilteredProduct from "./Components/ProductUI/FilteredProduct";
 import Detail from "./Components/ProductUI/detail/Detail";
-import data from "./Components/data/product.json";
 import Cart from "./Components/Cart/Cart";
 
 export default function App() {
-  const productTitle = data.filter((product) => product.title);
   return (
     <>
       <Navbar />

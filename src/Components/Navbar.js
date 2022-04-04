@@ -8,12 +8,17 @@ export default function Navbar() {
   const [name, setname] = useState("");
   let newProduct = "";
   let history = useHistory();
+  let isLogged = false;
 
   useEffect(() => {
     if (name !== "") {
       searchProduct();
     }
   }, [name]);
+
+  useEffect(() => {
+    isLogged = JSON.parse(localStorage.getItem("isLogged") || "false");
+  });
 
   const searchProduct = () => {
     newProduct =
@@ -71,18 +76,22 @@ export default function Navbar() {
         >
           <FaSearch />
         </button>
-        <Link
-          className="text-decoration-none mx-3 p-1 bg-secondary text-white"
-          to="/login"
-        >
-          Login
-        </Link>
-        <Link
-          className="text-decoration-none mx-3 p-1 bg-secondary text-white"
-          to="/register"
-        >
-          Register
-        </Link>
+        {isLogged === true && (
+          <Link
+            className="text-decoration-none mx-3 p-1 bg-secondary text-white"
+            to="/login"
+          >
+            Login
+          </Link>
+        )}
+        {isLogged === true && (
+          <Link
+            className="text-decoration-none mx-3 p-1 bg-secondary text-white"
+            to="/register"
+          >
+            Register
+          </Link>
+        )}
         <Link
           className="text-decoration-none mx-3 p-1 bg-secondary text-white"
           to="/cart"
